@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Dados pessoais</legend>
+        <p>
+            <label for="inome">Nome</label><br>
+            <input type="text" name="nome" id="inome" minlength="5" maxlength="20" required 
+            placeholder="Digite seu nome completo">
+        </p>
+        <p>
+            <!-- Form para e-mail
+                type:
+                    email - verifica se existe o @ apenas;
+                    autocomplete - para e-mail;
+            -->
+            <label for="iemail">E-mail</label><br>
+            <input type="email" name="email" id="iemail" autocomplete="email" placeholder="seuemail@exemplo.com">
+        </p>
+        <p>
+            <!-- Form para telefone
+                type:
+                    tel - compatível com aparelhos e dispositivos com lista de telefones
+            -->
+            <!-- Expressões regulares
+                 RegEx - Estudar mais.
+                 pattern - Toda expressão regular e implementada neste parâmetro.
+                    "^$" - ^ - Inicio da expressão regular
+                        - $ - Final da expressão regular
+                        - \d - São digitos
+                        - [0-9] - Também são digitos
+                        {4} - Quantidade de digitos
+                        Exemplo:
+                        "^[0-9]{4}-[0-9]{4}$" - Vai aceitar 4 digitos - e depois mais 4 digitos.
+                        - \( - abrir parênteses
+                        - \) - fechar parênteses
+            -->
+            <label for="itel">Telefone</label><br>
+            <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required placeholder="(xx)xxxx-xxxx"><br>
+
+            <br>
+            <label for="isenha">Crie sua senha</label><br>
+            <input type="number" name="senha" id="isenha" placeholder="Digite sua senha"><br>
+
+            <br>
+            <label for="iIdade">Idade</label><br>
+            <input type="number" name="idade" id="iIdade" placeholder="Sua idade"><br>
+            
+        </p>
+    </fieldset>
+</body>
+</html>
